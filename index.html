@@ -7,15 +7,108 @@
 
     <!-- CSS External -->
      <link rel="stylesheet" href="css/style.css">
+
+     <!-- Tailwind CSS  -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
 
-    <header></header>
+    <header class="main-header p-4">
+        
+        <div class="logo"></div>
+            <h1 style="font-style: oblique; color: rgb(179, 94, 107);" class="text-xl font-bold">Shara Company</h1>        
+    
+        <!-- navigation menu -->
+    <nav class="flex"> 
+        <a class="border p-2 rounded" href="#home-page" style="color: hotpink;">Home</a>
+        <a class="border p-2 rounded" href="#portfolio-page" style="color: hotpink;">Portofolio</a>
+        <a class="border p-2 rounded" href="#our-profile-page" style="color: hotpink;">Our Profile</a>
+        <a class="border p-2 rounded" href="#message-us-page" style="color: hotpink;">Message Us!</a>
+    </nav> 
+    </header>
 
-    <main></main>
+    <hr style="border-top-width: 3px; color: hotpink;"/>
 
-    <footer></footer>
+    <main>
+        <!-- Home Page -->
+          <section id="home-page" class="min-h-[500px] text-center justify-center content-center px-8">
+            <div class="flex justify-center mb-4">
+                <img src="https://i.pinimg.com/736x/0b/ee/30/0bee306057c77511fe36f698ca6d9b3f.jpg" alt="icon welcome" style="width: 300px; height: 300px; object-fit: cover; border-radius: 10%;"/>
+                </div>
+            <h2 style="font-style: oblique; color: rgb(179, 94, 107);" class="text-2xl font-bold " id="welcome-speech">Welcome to Our Website</h2>
+            <p class="mt-2">We are glad to have you here. Explore our services and offerings.</p>
+            
+        </section>
+
+        <hr style="border-top-width: 3px; color: hotpink;"/>
+
+        <!-- Our Portfolio -->
+        <section id="portfolio-page" class="min-h-[500px] text-left justify-center content-center px-8">
+            <h2 style="font-style: oblique; color: rgb(179, 94, 107);"class="text-xl font-bold">Our Portfolio</h2>
+            <p class="mt-2">Take a look at our diverse range of projects that showcase our skills and expertise.</p>
+            <section class="grid grid-cols-3 gap-4 mt-4 ">
+                <div>
+                    <img src="https://i.pinimg.com/1200x/fb/e6/f7/fbe6f76fb04d02eef694a36114507a10.jpg" alt="Portfolio Image 1" class="rounded-lg shadow-lg" style="min-height: fit-content; border-radius: 10%;"/>
+                </div>
+                <div>
+                    <img src="https://i.pinimg.com/1200x/62/92/ed/6292ed1191eaebc7e1fc1ec62bd3ae5a.jpg" alt="Portfolio Image 2" class="rounded-lg shadow-lg" style="min-height: fit-content; border-radius: 10%;"/>
+                </div>
+                <div>
+                    <img src="https://i.pinimg.com/736x/57/60/24/5760242ac074589973f2b5dbfc2589e1.jpg" alt="Portfolio Image 3" class="rounded-lg shadow-lg" style="min-height: fit-content; border-radius: 10%;"/>
+                </div>
+            </section>    
+        </section>
+
+        <hr style="border-top-width: 3px; color: hotpink;"/>
+
+        <!-- About company -->
+        <section id="our-profile-page" class="min-h-[600px] text-center content-center">
+            <h2 style="font-style: oblique; color: rgb(179, 94, 107);" class="text-xl font-bold">About Shara Company</h2>
+            <p class="mt-2">Shara Company is dedicated to providing top-notch services in various domains.</p>
+            <div class="mt-4">
+                <img src="https://i.pinimg.com/1200x/e4/a6/dd/e4a6ddffeed903547d14b092e5b988e0.jpg" alt="Company Profile" class="px-4 mx-auto rounded-lg shadow-lg" style="border-radius: 10%;"/>
+        </section>
+
+        <hr class="min-h-5" style="border-top-width: 2px; color: hotpink;"/>
+
+        <!-- Message Us Page -->
+        <section id="message-us-page" class="min-h-[505px] mx-8">
+            <header>
+                <h2 style="font-style: oblique; color: rgb(179, 94, 107);" class=" text-xl font-bold">Message Us!</h2>
+                <p class="min-h-10 mt-2">Have questions or want to work with us? Send us a message and we'll get back to you
+                    promptly.</p>
+            </header>
+
+            <form onsubmit="return validateForm()">
+
+                <div class="mb-4">
+                    <label class="block mb-2" for="name">Name:</label>
+                    <input class="w-full p-2 border rounded" type="text" id="name" name="name" required />
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2" for="Gender">Gender:</label>
+                    <input type="radio" name="gender" value="Boy" required> Boy
+                    <input type="radio" name="gender" value="Girl"> Girl
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2" for="email">E-mail:</label>
+                    <input class="w-full p-2 border rounded" type="email" id="email" name="email" required />
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2" for="message">Message:</label>
+                    <textarea class="w-full p-2 border rounded" id="message" name="message" rows="5"
+                        required></textarea>
+                </div>
+                <button class="px-4 py-2 bg-pink-400 text-white rounded mb-4" type="button" onclick="validateForm()">Send Message</button>
+                
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p class="text-center p-3 bg-pink-200">© 2026 Shara Company. All rights reserved.</p>
+    </footer>
 
     <!-- JS External -->
     <script src="js/script.js"></script>
